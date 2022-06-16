@@ -14,60 +14,73 @@
         android:layout_gravity="center"
         android:orientation="horizontal">
         <Button
-            android:id="@+id/btn_prev"
+            android:id="@+id/btn_start"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="15dp"
-            android:text="이전화면"/>
+            android:text="시작"/>
         <Button
-            android:id="@+id/btn_next"
+            android:id="@+id/btn_stop"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="다음화면"/>
+            android:layout_marginRight="10dp"
+            android:text="중지"/>
+        <ViewFlipper
+            android:id="@+id/vflip"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <EditText
+            android:id="@+id/edit_interval"
+            android:inputType="number"
+            android:maxLength="3"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btn_second"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(초)설정"/>
 
 
     </LinearLayout>
 
-    <ViewFlipper
-        android:id="@+id/vflip"
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="#ffff00"
+        android:layout_gravity="center"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <LinearLayout
-            android:orientation="vertical"
-            android:background="#ffff00"
-            android:layout_gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/apple"/>
-        </LinearLayout>
-        <LinearLayout
-            android:orientation="vertical"
-            android:background="#ffff00"
-            android:layout_gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/apple"/>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="#ffff00"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/f"/>
-        </LinearLayout>
-        <LinearLayout
-            android:orientation="vertical"
-            android:background="#717110"
-            android:layout_gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/f"/>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="#717110"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/sa"/>
-        </LinearLayout>
-    </ViewFlipper>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/sa"/>
+            </LinearLayout>
+</ViewFlipper>
 
-</LinearLayout>
+    </LinearLayout>
